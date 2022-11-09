@@ -19,9 +19,9 @@ jobs:
         with: 
           python-version: '3.x'
       - name: Display Python version
-        run: echo ::set-env testing='Sarah'
+        run: echo ::set-env name=TESTING::'Sarah'
       - name: do a thing
-        run: echo $testing
+        run: echo "$testing"
 
   # This workflow contains a single job called "build"
   accept-changes:
