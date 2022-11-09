@@ -20,6 +20,7 @@ jobs:
           python-version: '3.x'
       - name: Display Python version
         run: echo ::set-env testing='Sarah'
+      - name: do a thing
         run: echo $testing
 
   # This workflow contains a single job called "build"
