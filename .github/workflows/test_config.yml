@@ -12,7 +12,7 @@ jobs:
   # This workflow contains a single job called "build"
   accept-changes:
     # if: github.ref_name == r'[0-9][0-9]'
-    if: VALID_NAME
+    if: $VALID_NAME
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
