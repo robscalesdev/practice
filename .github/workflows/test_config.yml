@@ -12,7 +12,7 @@ jobs:
   # This workflow contains a single job called "build"
   accept-changes:
     # if: github.ref_name == r'[0-9][0-9]'
-    if: ${{ env.VALID_NAME == 'Lisa' }}
+    if: github.ref_name 
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -27,7 +27,7 @@ jobs:
 
       # Prints the github.ref_name of the job
       - name: Print ref_name
-        run: echo ${{ github.ref_name }}
+        run: echo ${{ github }}
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
