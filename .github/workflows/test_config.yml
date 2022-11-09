@@ -17,7 +17,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   accept-changes:
-    if: github.ref_name == 'main'
+    if: github.ref_name == 'other'
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -39,3 +39,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  
+  other: 
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Does work
+        run: echo does work
