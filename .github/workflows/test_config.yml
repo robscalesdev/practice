@@ -19,7 +19,8 @@ jobs:
         with: 
           python-version: '3.x'
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
+        run: echo ::set-env testing='Sarah'
+        run: echo $testing
 
   # This workflow contains a single job called "build"
   accept-changes:
