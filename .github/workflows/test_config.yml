@@ -6,13 +6,13 @@ on: push
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 
 env: 
-  VALID_NAME: True
+  VALID_NAME: Lisa
 
 jobs:
   # This workflow contains a single job called "build"
   accept-changes:
     # if: github.ref_name == r'[0-9][0-9]'
-    if: $VALID_NAME
+    # if: $VALID_NAME
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -23,7 +23,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo "Hello, $VALID_NAME!"
 
       # Prints the github.ref_name of the job
       - name: Print ref_name
